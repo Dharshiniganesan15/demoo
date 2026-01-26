@@ -6,31 +6,103 @@
 
 <!-- doc:ref=add -->
 
-Adds multiple numbers together with timestamp logging.
+Documentation for `add`.
 
-**Function**: add(a, b, \*args)
-
-**Parameters**:
-
-- `a` (int/float): First number
-- `b` (int/float): Second number
-- `*args`: Additional numbers to add
-
-**Returns**: Sum of all numbers
-
-_Last updated due to code change on 2024-01-26_
-
-### Subtract Function
-
-<!-- doc:ref=subtract -->
-
-Subtracts two numbers and returns the result.
-
-**Function**: subtract(a, b)
+**Function**: add(a, b, *args, debug=False)
 
 **Parameters**:
 
-- `a` (int/float): First number
-- `b` (int/float): Second number
+- `a`: Parameter
+- `b`: Parameter
+- `*args`: Parameter
+- `debug`: Parameter
 
-**Returns**: Difference of a and b
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:30:43_
+
+### Multiply Function
+
+<!-- doc:ref=multiply -->
+
+Documentation for `multiply`.
+
+**Function**: multiply(a, b, *args, debug=False)
+
+**Parameters**:
+
+- `a`: Parameter
+- `b`: Parameter
+- `*args`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:30:43_
+
+### Divide Function
+
+<!-- doc:ref=divide -->
+
+Documentation for `divide`.
+
+**Function**: divide(a, b, *args, debug=False)
+
+**Parameters**:
+
+- `a`: Parameter
+- `b`: Parameter
+- `*args`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:30:43_
+
+### Concat Function
+
+<!-- doc:ref=concat -->
+
+Documentation for `concat`.
+
+**Function**: concat(a, b, *args, sep="", debug=False)
+
+**Parameters**:
+
+- `a`: Parameter
+- `b`: Parameter
+- `*args`: Parameter
+- `sep`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:30:43_
+
+### Factorial Function
+
+<!-- doc:ref=factorial -->
+
+Documentation for `factorial`.
+
+**Function**: factorial(n, debug=False)
+
+**Parameters**:
+
+- `n`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:30:43_
+
