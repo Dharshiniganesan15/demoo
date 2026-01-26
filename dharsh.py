@@ -31,3 +31,28 @@ def add(a, b, *args, debug=False):
         print(f"[DEBUG] Result: {result}")
     
     return result
+
+def multiply(a, b, *args):
+    """Multiply multiple numbers together with logging.
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+        *args: Additional numbers to multiply
+        
+    Returns:
+        int/float: Product of all numbers
+        
+    Raises:
+        TypeError: If any argument is not a number
+    """
+    # Add validation
+    if not all(isinstance(x, (int, float)) for x in [a, b] + list(args)):
+        raise TypeError("All arguments must be numbers")
+    
+    print(f"[{datetime.datetime.now()}] Multiplying numbers")
+    result = a * b
+    for num in args:
+        result *= num
+    
+    return result
