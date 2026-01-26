@@ -154,3 +154,9 @@ def factorial(n, debug=False):
         print(f"[DEBUG] Final factorial({n}) = {result}")
 
     return result
+    def power(base, exp, debug=False):
+    """Calculate base^exp with logging."""
+    if debug:
+        print(f"[DEBUG] Calculating {base}^{exp}")
+    result = base ** exp
+    return result
