@@ -1,14 +1,18 @@
-def add(a, b):
-    """Add two numbers together.
+def add(a, b, *args):
+    """Add multiple numbers together.
     
     Args:
         a (int/float): First number
         b (int/float): Second number
+        *args: Additional numbers to add
         
     Returns:
-        int/float: Sum of a and b
+        int/float: Sum of all numbers
     """
-    return a + b
+    result = a + b
+    for num in args:
+        result += num
+    return result
 
 def subtract(a, b):
     """Subtract two numbers.
