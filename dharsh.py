@@ -154,9 +154,37 @@ def factorial(n, debug=False):
         print(f"[DEBUG] Final factorial({n}) = {result}")
 
     return result
-    def power(base, exp, debug=False):
+
+def power(base, exp, debug=False):
     """Calculate base^exp with logging."""
     if debug:
         print(f"[DEBUG] Calculating {base}^{exp}")
     result = base ** exp
+    return result
+
+def to_uppercase(text, debug=False):
+    """Convert text to uppercase with logging.
+    
+    Args:
+        text (str): Input text to convert
+        debug (bool): Enable debug output
+        
+    Returns:
+        str: Uppercase version of the input text
+        
+    Raises:
+        TypeError: If input is not a string
+    """
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string")
+    
+    if debug:
+        print(f"[DEBUG] Converting to uppercase: {text!r}")
+    
+    print(f"[{datetime.datetime.now()}] Converting text to uppercase")
+    result = text.upper()
+    
+    if debug:
+        print(f"[DEBUG] Result: {result!r}")
+    
     return result
