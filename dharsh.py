@@ -188,3 +188,31 @@ def to_uppercase(text, debug=False):
         print(f"[DEBUG] Result: {result!r}")
     
     return result
+
+
+def reverse_string(text, debug=False):
+    """Reverse a string with logging.
+    
+    Args:
+        text (str): Input text to reverse
+        debug (bool): Enable debug output
+        
+    Returns:
+        str: Reversed version of the input text
+        
+    Raises:
+        TypeError: If input is not a string
+    """
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string")
+    
+    if debug:
+        print(f"[DEBUG] Reversing string: {text!r}")
+    
+    print(f"[{datetime.datetime.now()}] Reversing string")
+    result = text[::-1]
+    
+    if debug:
+        print(f"[DEBUG] Result: {result!r}")
+    
+    return result
