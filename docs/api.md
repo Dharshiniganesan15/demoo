@@ -21,7 +21,7 @@ Documentation for `add`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:36:02_
+_Last updated due to code change on 2026-01-26 21:38:06_
 
 ### Multiply Function
 
@@ -42,7 +42,7 @@ Documentation for `multiply`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:36:02_
+_Last updated due to code change on 2026-01-26 21:38:06_
 
 ### Divide Function
 
@@ -63,7 +63,7 @@ Documentation for `divide`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:36:02_
+_Last updated due to code change on 2026-01-26 21:38:06_
 
 ### Concat Function
 
@@ -85,7 +85,7 @@ Documentation for `concat`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:36:02_
+_Last updated due to code change on 2026-01-26 21:38:06_
 
 ### Factorial Function
 
@@ -104,5 +104,44 @@ Documentation for `factorial`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:36:02_
+_Last updated due to code change on 2026-01-26 21:38:06_
+
+### Power Function
+
+<!-- doc:ref=power -->
+
+Documentation for `power`.
+
+**Function**: power(base, exp, debug=False)
+
+**Parameters**:
+
+- `base`: Parameter
+- `exp`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:38:06_
+
+### To_uppercase Function
+
+<!-- doc:ref=to_uppercase -->
+
+Documentation for `to_uppercase`.
+
+**Function**: to_uppercase(text, debug=False)
+
+**Parameters**:
+
+- `text`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:38:06_
 
