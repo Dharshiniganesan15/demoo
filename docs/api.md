@@ -21,7 +21,7 @@ Documentation for `add`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### Multiply Function
 
@@ -42,7 +42,7 @@ Documentation for `multiply`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### Divide Function
 
@@ -63,7 +63,7 @@ Documentation for `divide`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### Concat Function
 
@@ -85,7 +85,7 @@ Documentation for `concat`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### Factorial Function
 
@@ -104,7 +104,7 @@ Documentation for `factorial`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### Power Function
 
@@ -124,7 +124,7 @@ Documentation for `power`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
 
 ### To_uppercase Function
 
@@ -143,5 +143,24 @@ Documentation for `to_uppercase`.
 
 **Raises**: See implementation
 
-_Last updated due to code change on 2026-01-26 21:38:06_
+_Last updated due to code change on 2026-01-26 21:57:57_
+
+### Reverse_string Function
+
+<!-- doc:ref=reverse_string -->
+
+Documentation for `reverse_string`.
+
+**Function**: reverse_string(text, debug=False)
+
+**Parameters**:
+
+- `text`: Parameter
+- `debug`: Parameter
+
+**Returns**: See implementation
+
+**Raises**: See implementation
+
+_Last updated due to code change on 2026-01-26 21:57:57_
 
