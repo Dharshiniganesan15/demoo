@@ -32,13 +32,14 @@ def add(a, b, *args, debug=False):
     
     return result
 
-def multiply(a, b, *args):
-    """Multiply multiple numbers together with logging.
+def multiply(a, b, *args, debug=False):
+    """Multiply multiple numbers together with logging and validation.
     
     Args:
         a (int/float): First number
         b (int/float): Second number
         *args: Additional numbers to multiply
+        debug (bool): Enable debug output
         
     Returns:
         int/float: Product of all numbers
@@ -46,13 +47,18 @@ def multiply(a, b, *args):
     Raises:
         TypeError: If any argument is not a number
     """
-    # Add validation
     if not all(isinstance(x, (int, float)) for x in [a, b] + list(args)):
         raise TypeError("All arguments must be numbers")
-    
+
+    if debug:
+        print(f"[DEBUG] Multiplying: {a} * {b} * {args}")
+
     print(f"[{datetime.datetime.now()}] Multiplying numbers")
     result = a * b
     for num in args:
         result *= num
-    
+
+    if debug:
+        print(f"[DEBUG] Result: {result}")
+
     return result
