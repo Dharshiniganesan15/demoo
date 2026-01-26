@@ -1,5 +1,7 @@
+import datetime
+
 def add(a, b, *args):
-    """Add multiple numbers together with timestamp.
+    """Add multiple numbers together with enhanced logging and validation.
     
     Args:
         a (int/float): First number
@@ -8,10 +10,16 @@ def add(a, b, *args):
         
     Returns:
         int/float: Sum of all numbers
+        
+    Raises:
+        TypeError: If any argument is not a number
     """
-    print(f"[{datetime.now()}] Adding numbers")  # Add this import at top
+    # Add validation
+    if not all(isinstance(x, (int, float)) for x in [a, b] + list(args)):
+        raise TypeError("All arguments must be numbers")
+    
+    print(f"[{datetime.datetime.now()}] Adding numbers")
     result = a + b
     for num in args:
         result += num
     return result
-    
