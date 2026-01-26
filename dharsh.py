@@ -23,8 +23,10 @@ def subtract(a, b):
         
     Returns:
         int/float: Difference of a and b
-    """
-    return a - b
+    """ result = a + b
+    for num in args:
+        result += num
+    return result
 
 def multiply(a, b):
     """Multiply two numbers.
