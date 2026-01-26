@@ -98,3 +98,24 @@ def divide(a, b, *args, debug=False):
         print(f"[DEBUG] Result: {result}")
 
     return result
+
+def concat(a, b, *args, sep="", debug=False):
+    """Concatenate multiple values into a single string.
+    
+    Args:
+        a: First value
+        b: Second value
+        *args: Additional values
+        sep (str): Separator inserted between values
+        debug (bool): Enable debug output
+        
+    Returns:
+        str: Concatenated string
+    """
+    parts = [str(a), str(b)] + [str(x) for x in args]
+
+    if debug:
+        print(f"[DEBUG] Concatenating {len(parts)} parts with sep={sep!r}")
+
+    print(f"[{datetime.datetime.now()}] Concatenating strings")
+    return sep.join(parts)
