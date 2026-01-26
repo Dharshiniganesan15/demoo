@@ -119,3 +119,38 @@ def concat(a, b, *args, sep="", debug=False):
 
     print(f"[{datetime.datetime.now()}] Concatenating strings")
     return sep.join(parts)
+
+
+def factorial(n, debug=False):
+    """Compute factorial of a non-negative integer.
+    
+    Args:
+        n (int): Non-negative integer
+        debug (bool): Enable debug output
+        
+    Returns:
+        int: Factorial of n
+        
+    Raises:
+        TypeError: If n is not an integer
+        ValueError: If n is negative
+    """
+    if not isinstance(n, int):
+        raise TypeError("Factorial input must be an integer")
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+
+    if debug:
+        print(f"[DEBUG] Computing factorial({n})")
+
+    print(f"[{datetime.datetime.now()}] Calculating factorial")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+        if debug:
+            print(f"[DEBUG] Step {i}: result = {result}")
+
+    if debug:
+        print(f"[DEBUG] Final factorial({n}) = {result}")
+
+    return result
