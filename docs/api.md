@@ -1,22 +1,28 @@
 # API Documentation
 
-## Functions
+## Math Functions
 
-### add(a, b)
+### Add Function
+<!-- doc:ref=add -->
+Adds two numbers together and returns the result.
 
-Add two numbers together.
+**Function**: [add(a, b, *args)](cci:1://file:///c:/Users/keert/CascadeProjects/windsurf-project-10/demoo/dharsh.py:0:0-14:17)
 
-### subtract(a, b)
+**Parameters**:
+- `a` (int/float): First number
+- `b` (int/float): Second number
+- `*args`: Additional numbers to add
 
-Subtract b from a.
+**Returns**: Sum of all numbers
 
-## Classes
+### Subtract Function
+<!-- doc:ref=subtract -->
+Subtracts two numbers and returns the result.
 
-### Calculator
+**Function**: [subtract(a, b)](cci:1://file:///c:/Users/keert/CascadeProjects/windsurf-project-10/demoo/dharsh.py:16:0-28:17)
 
-A simple calculator class.
+**Parameters**:
+- `a` (int/float): First number
+- `b` (int/float): Second number
 
-#### Methods
-
-- add(a, b): Add two numbers and store in history.
-- subtract(a, b): Subtract two numbers and store in history.
+**Returns**: Difference of a and b
