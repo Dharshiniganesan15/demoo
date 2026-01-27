@@ -60,3 +60,35 @@ def multiply(a, b, debug=False):
     
     return result
 
+def divide(a, b, debug=False):
+    """Divide two numbers with logging and validation.
+    
+    Args:
+        a (int/float): First number (dividend)
+        b (int/float): Second number (divisor)
+        debug (bool): Enable debug output
+        
+    Returns:
+        int/float: Result of division
+        
+    Raises:
+        TypeError: If any argument is not a number
+        ZeroDivisionError: If divisor is zero
+    """
+    if not all(isinstance(x, (int, float)) for x in [a, b]):
+        raise TypeError("All arguments must be numbers")
+    
+    if b == 0:
+        raise ZeroDivisionError("Division by zero is not allowed")
+    
+    if debug:
+        print(f"[DEBUG] Dividing: {a} / {b}")
+    
+    print(f"[{datetime.datetime.now()}] Dividing numbers")
+    result = a / b
+    
+    if debug:
+        print(f"[DEBUG] Result: {result}")
+    
+    return result
+
