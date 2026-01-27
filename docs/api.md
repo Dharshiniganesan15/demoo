@@ -207,3 +207,28 @@ result = to_uppercase('hello')  # Returns 'HELLO'
 result = reverse_string('hello')  # Returns 'olleh'
 ```
 
+### Calculate_Average Function
+<!-- doc:ref=calculate_average -->
+**Description**: Calculate the average (mean) of a list of numbers.
+    
+    Args:
+        numbers (list): List of numbers to calculate average
+        debug (bool): Enable debug output
+        
+    Returns:
+        float: Average of the numbers
+        
+    Raises:
+        TypeError: If input is not a list or contains non-numeric values
+        ValueError: If list is empty
+**Function**: `calculate_average(numbers, debug=False)`
+**Parameters**:
+- `numbers`: Function parameter
+- `debug` (bool): Enable debug output for detailed logging
+**Returns**: Result of the function operation
+**Raises**: See implementation for specific error conditions
+**Examples**:
+```python
+result = calculate_average(...)  # See function signature
+```
+
