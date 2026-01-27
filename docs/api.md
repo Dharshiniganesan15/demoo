@@ -74,3 +74,39 @@ result = multiply(2, 3, 4)  # Returns 24
 - Performance optimized for typical use cases
 - Follows Python best practices and type hints
 
+### Divide Function
+\1<!-- doc:hash=03ee3aaf8ee2 -->
+**Description**: Divide two numbers with logging and validation.
+    
+    Args:
+        a (int/float): First number (dividend)
+        b (int/float): Second number (divisor)
+        debug (bool): Enable debug output
+        
+    Returns:
+        int/float: Result of division
+        
+    Raises:
+        TypeError: If any argument is not a number
+        ZeroDivisionError: If divisor is zero
+**Function**: `divide(a, b, debug=False)`
+**Parameters**:
+- `a` (int|float): Primary numeric operand for the divide operation
+- `b` (int|float): Primary numeric operand for the divide operation
+- `debug` (bool): Enables detailed debug logging to trace function execution and intermediate values
+**Returns**: (int|float) The result of sequential division with floating-point precision
+**Raises**: TypeError - When any argument is not a numeric type (int or float)
+**Raises**: ZeroDivisionError - When attempting division by zero
+**Examples**:
+```python
+# Basic division
+result = divide(10, 2)  # Returns 5.0
+# Sequential division
+result = divide(100, 5, 2)  # Returns 10.0
+```
+**Notes**:
+- This function includes comprehensive input validation
+- Debug mode provides detailed execution tracing
+- Performance optimized for typical use cases
+- Follows Python best practices and type hints
+
