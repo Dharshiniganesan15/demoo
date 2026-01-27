@@ -216,3 +216,40 @@ def reverse_string(text, debug=False):
         print(f"[DEBUG] Result: {result!r}")
     
     return result
+
+
+def calculate_average(numbers, debug=False):
+    """Calculate the average (mean) of a list of numbers.
+    
+    Args:
+        numbers (list): List of numbers to calculate average
+        debug (bool): Enable debug output
+        
+    Returns:
+        float: Average of the numbers
+        
+    Raises:
+        TypeError: If input is not a list or contains non-numeric values
+        ValueError: If list is empty
+    """
+    if not isinstance(numbers, list):
+        raise TypeError("Input must be a list of numbers")
+    
+    if not numbers:
+        raise ValueError("Cannot calculate average of empty list")
+    
+    if not all(isinstance(x, (int, float)) for x in numbers):
+        raise TypeError("All elements in the list must be numbers")
+    
+    if debug:
+        print(f"[DEBUG] Calculating average of {len(numbers)} numbers: {numbers}")
+    
+    print(f"[{datetime.datetime.now()}] Calculating average")
+    total = sum(numbers)
+    count = len(numbers)
+    result = total / count
+    
+    if debug:
+        print(f"[DEBUG] Sum: {total}, Count: {count}, Average: {result}")
+    
+    return result
