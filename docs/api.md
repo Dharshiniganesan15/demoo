@@ -14,14 +14,14 @@ Automated documentation for demoo repository.
 
 ### 🐍 Python Functions
 
-<!-- doc:ref=sub -->
+<!-- doc:ref=multiply -->
 <!-- doc:hash=e3b0c44298fc -->
-**Description**: The `sub` function performs arithmetic subtraction by subtracting the second argument from the first and returns the resulting difference. It supports numeric inputs with accurate computation.
+**Description**: The `multiply` function performs arithmetic multiplication on the provided numeric arguments and returns their product. It efficiently handles multiple factors with precise results.
 
-**Function**: `sub(a, b)`
+**Function**: `multiply(a, b)`
 
 **Examples**:
 ```python
-result = sub(1, 2)
+result = multiply(1, 2)
 ```
 
