@@ -2,6 +2,8 @@
 
 ## Function Reference
 
+_Note: LLM generation limited to first 1 changed functions via LLM_MAX_FUNCTIONS to reduce LLM usage._
+
 ### Add Function
 \1<!-- doc:hash=57c72d22444e -->
 **Description**: Add multiple numbers together with enhanced logging and validation.
@@ -39,4 +41,13 @@ result = add(10, 20, debug=True)  # Shows calculation steps
 - Debug mode provides detailed execution tracing
 - Performance optimized for typical use cases
 - Follows Python best practices and type hints
+
+### Multiply Function
+<!-- doc:ref=multiply -->
+<!-- doc:hash=d9e586635599 -->
+**Description**: Documentation pending due to LLM_MAX_FUNCTIONS limit.
+**Function**: `multiply(a, b, debug=False)`
+**Parameters**: See implementation
+**Returns**: See implementation
+**Raises**: See implementation
 
