@@ -3,92 +3,40 @@
 ## Function Reference
 
 ### Add Function
-<!-- doc:ref=add -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Multiply Function
-<!-- doc:ref=multiply -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Divide Function
-<!-- doc:ref=divide -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Concat Function
-<!-- doc:ref=concat -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Factorial Function
-<!-- doc:ref=factorial -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Power Function
-<!-- doc:ref=power -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### To_Uppercase Function
-<!-- doc:ref=to_uppercase -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Reverse_String Function
-<!-- doc:ref=reverse_string -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Calculate_Average Function
-<!-- doc:ref=calculate_average -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
-
-### Find_Max Function
-<!-- doc:ref=find_max -->
-**Error**: Failed to generate documentation: OpenAI API key not set. Please set OPENAI_API_KEY environment variable.
-
-**Function**: `{fn}()`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
+\1<!-- doc:hash=57c72d22444e -->
+**Description**: Add multiple numbers together with enhanced logging and validation.
+    
+    Args:
+        a (int/float): First number
+        b (int/float): Second number
+        *args: Additional numbers to add
+        debug (bool): Enable debug output
+        
+    Returns:
+        int/float: Sum of all numbers
+        
+    Raises:
+        TypeError: If any argument is not a number
+**Function**: `add(a, b, *args, debug=False)`
+**Parameters**:
+- `a` (int|float): Primary numeric operand for the add operation
+- `b` (int|float): Primary numeric operand for the add operation
+- `*args`: Additional variable arguments for extended functionality
+- `debug` (bool): Enables detailed debug logging to trace function execution and intermediate values
+**Returns**: (int|float) The computed result of the mathematical operation with precision preservation
+**Raises**: TypeError - When any argument is not a numeric type (int or float)
+**Examples**:
+```python
+# Basic addition
+result = add(5, 3)  # Returns 8
+# Multiple numbers
+result = add(1, 2, 3, 4, 5)  # Returns 15
+# With debug
+result = add(10, 20, debug=True)  # Shows calculation steps
+```
+**Notes**:
+- This function includes comprehensive input validation
+- Debug mode provides detailed execution tracing
+- Performance optimized for typical use cases
+- Follows Python best practices and type hints
 
