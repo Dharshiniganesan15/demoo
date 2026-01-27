@@ -2,8 +2,6 @@
 
 ## Function Reference
 
-_Note: LLM generation limited to first 1 changed functions via LLM_MAX_FUNCTIONS to reduce LLM usage._
-
 ### Add Function
 \1<!-- doc:hash=e3b0c44298fc -->
 **Description**: The `add` function provides efficient and reliable operations with comprehensive error handling and optional debug capabilities.
@@ -27,13 +25,4 @@ result = add(10, 20, debug=True)  # Shows calculation steps
 - Debug mode provides detailed execution tracing
 - Performance optimized for typical use cases
 - Follows Python best practices and type hints
-
-### Subtract Function
-<!-- doc:ref=subtract -->
-<!-- doc:hash=e3b0c44298fc -->
-**Description**: Documentation pending due to LLM_MAX_FUNCTIONS limit.
-**Function**: `subtract(a, b)`
-**Parameters**: See implementation
-**Returns**: See implementation
-**Raises**: See implementation
 
