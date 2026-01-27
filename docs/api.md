@@ -75,20 +75,8 @@ result = multiply(2, 3, 4)  # Returns 24
 - Follows Python best practices and type hints
 
 ### Divide Function
-\1<!-- doc:hash=03ee3aaf8ee2 -->
-**Description**: Divide two numbers with logging and validation.
-    
-    Args:
-        a (int/float): First number (dividend)
-        b (int/float): Second number (divisor)
-        debug (bool): Enable debug output
-        
-    Returns:
-        int/float: Result of division
-        
-    Raises:
-        TypeError: If any argument is not a number
-        ZeroDivisionError: If divisor is zero
+\1<!-- doc:hash=2417c61e10b2 -->
+**Description**: The `divide` function provides efficient and reliable operations with comprehensive error handling and optional debug capabilities.
 **Function**: `divide(a, b, debug=False)`
 **Parameters**:
 - `a` (int|float): Primary numeric operand for the divide operation
