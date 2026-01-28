@@ -1,1 +1,1 @@
-def mul(a, b): return a * b
+def multipleof(a, b): return a * b
