@@ -14,15 +14,15 @@ Automated documentation for demoo repository.
 
 ### 🐍 Python Functions
 
-### Mul Function
-<!-- doc:ref=mul -->
+### Multipleof Function
+<!-- doc:ref=multipleof -->
 <!-- doc:hash=e3b0c44298fc -->
-**Description**: The `mul` function performs arithmetic multiplication on the provided numeric arguments and returns their product. It efficiently handles multiple factors with precise results.
+**Description**: The `multipleof` function processes the provided inputs according to its specific implementation and returns the computed result. It performs essential operations with proper error handling and input validation.
 
-**Function**: `mul(a, b)`
+**Function**: `multipleof(a, b)`
 
 **Examples**:
 ```python
-result = mul(1, 2)
+result = multipleof(1, 2)
 ```
 
