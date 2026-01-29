@@ -14,17 +14,26 @@ Automated documentation for demoo repository.
 
 ### 🐍 Python Functions
 
-### Find_max Function
-
 <!-- doc:ref=find_max -->
-<!-- doc:hash=a1b2c3d4e5f6 -->
+<!-- doc:hash=e3b0c44298fc -->
+**Description**: The `find_max` function identifies and returns the maximum value from a collection of numeric inputs. It efficiently scans through data to determine the highest value with optimal performance.
 
-**Description**: The `find_max` function finds the maximum value in a list of numbers and returns the highest value. It handles empty lists with proper error validation and provides efficient maximum value computation.
-
-**Function**: `find_max(numbers: List[float]) -> float`
+**Function**: `find_max()`
 
 **Examples**:
-
 ```python
-result = find_max([1, 5, 3, 9, 2])
+result = find_max(1, 2)
 ```
+
+### Find_Min Function
+<!-- doc:ref=find_min -->
+<!-- doc:hash=e3b0c44298fc -->
+**Description**: The `find_min` function identifies and returns the minimum value from a collection of numeric inputs. It efficiently scans through data to determine the lowest value with optimal performance.
+
+**Function**: `find_min()`
+
+**Examples**:
+```python
+result = find_min(1, 2)
+```
+
