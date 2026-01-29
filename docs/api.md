@@ -7,7 +7,7 @@ Automated documentation for demoo repository.
 ## Repository Structure
 
 /
-├── 🐍 main.py
+├── 📄 .env
 └── 📚 docs/
 
 ## File Documentation
