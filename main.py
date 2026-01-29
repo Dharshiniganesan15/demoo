@@ -8,11 +8,7 @@ def find_max(numbers: List[float]) -> float:
         raise ValueError("List cannot be empty")
     return max(numbers)
 
-def find_min(numbers: List[float]) -> float:
-    """Find the minimum value in a list of numbers."""
-    if not numbers:
-        raise ValueError("List cannot be empty")
-    return min(numbers)
+
 
 def calculate_average(numbers: List[float]) -> float:
     """Calculate the average of a list of numbers."""
