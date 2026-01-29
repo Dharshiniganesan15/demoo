@@ -1,1 +1,1 @@
-def multiple(a, b): return a * b
+def multipleof(a, b): return a * b
