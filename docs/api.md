@@ -14,15 +14,15 @@ Automated documentation for demoo repository.
 
 ### 🐍 Python Functions
 
-### Multiple Function
-<!-- doc:ref=multiple -->
+### Multipleof Function
+<!-- doc:ref=multipleof -->
 <!-- doc:hash=e3b0c44298fc -->
-**Description**: The `multiple` function processes the provided inputs according to its specific implementation and returns the computed result. It performs essential operations with proper error handling and input validation.
+**Description**: The `multipleof` function processes the provided inputs according to its specific implementation and returns the computed result. It performs essential operations with proper error handling and input validation.
 
-**Function**: `multiple(a, b)`
+**Function**: `multipleof(a, b)`
 
 **Examples**:
 ```python
-result = multiple(1, 2)
+result = multipleof(1, 2)
 ```
 
