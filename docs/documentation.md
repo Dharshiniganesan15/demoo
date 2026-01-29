@@ -1,8 +1,8 @@
 # demoo - Complete API Documentation
 
-**Generated**: 2026-01-29 21:51:39  
+**Generated**: 2026-01-29 21:54:21  
 **Repository**: demoo  
-**Functions**: 1
+**Functions**: 7
 
 ---
 
@@ -68,6 +68,96 @@ print(f"Maximum value: {result}")
 
 ```python
 result = demo_advanced_project()
+```
+
+
+### Calculator
+
+**Signature**: `class Calculator()`
+
+**Description**: Advanced calculator with various mathematical operations.
+
+**Returns**: Instance of Calculator class with various methods.
+
+**Examples**:
+
+```python
+calculator = Calculator()
+```
+
+
+### Stringprocessor
+
+**Signature**: `class StringProcessor()`
+
+**Description**: Advanced string processor with various text operations.
+
+**Returns**: Instance of StringProcessor class with various methods.
+
+**Examples**:
+
+```python
+stringprocessor = StringProcessor()
+```
+
+
+### Dataanalyzer
+
+**Signature**: `class DataAnalyzer()`
+
+**Description**: Advanced data analyzer with statistical operations.
+
+**Returns**: Instance of DataAnalyzer class with various methods.
+
+**Examples**:
+
+```python
+dataanalyzer = DataAnalyzer()
+```
+
+
+### Filemanager
+
+**Signature**: `class FileManager()`
+
+**Description**: File manager for various file operations.
+
+**Returns**: Instance of FileManager class with various methods.
+
+**Examples**:
+
+```python
+filemanager = FileManager()
+```
+
+
+### Cryptoutils
+
+**Signature**: `class CryptoUtils()`
+
+**Description**: Cryptography utilities for hashing and encoding.
+
+**Returns**: Instance of CryptoUtils class with various methods.
+
+**Examples**:
+
+```python
+cryptoutils = CryptoUtils()
+```
+
+
+### Validator
+
+**Signature**: `class Validator()`
+
+**Description**: Validation utilities for various data types.
+
+**Returns**: Instance of Validator class with various methods.
+
+**Examples**:
+
+```python
+validator = Validator()
 ```
 
 
