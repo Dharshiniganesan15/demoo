@@ -11,6 +11,10 @@ def find_max(numbers: List[float]) -> float:
     if not numbers:
         raise ValueError("List cannot be empty")
     return max(numbers)
-
+def find_string(numbers: List[float]) -> float:
+    """Find the maximum value in a list of numbers."""
+    if not numbers:
+        raise ValueError("List cannot be empty")
+    return max(numbers)
 
 #
