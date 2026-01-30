@@ -460,6 +460,28 @@ def demo_advanced_project():
     print("=" * 60)
 
 # ============================================================================
+# SAMPLE FUNCTION FOR GEMINI TESTING
+# ============================================================================
+
+def calculate_simple_interest(principal: float, rate: float, time: float) -> float:
+    """
+    Calculate simple interest for a given principal, rate, and time period.
+    
+    Args:
+        principal: The initial amount of money
+        rate: The annual interest rate (as a decimal)
+        time: The time period in years
+        
+    Returns:
+        The calculated simple interest amount
+        
+    Example:
+        >>> calculate_simple_interest(1000, 0.05, 2)
+        100.0
+    """
+    return principal * rate * time
+
+# ============================================================================
 # MAIN EXECUTION
 # ============================================================================
 
