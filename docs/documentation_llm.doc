@@ -1,0 +1,37 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Courier New;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green128\blue0;}\pard\qc\f0\fs32\b DEMOO API DOCUMENTATION\b0\par\pard\qc\f0\fs20\i Generated on January 29, 2026 at 09:56 PM\i0\par\pard\qc\f0\fs20 ==================================================\par\par\pard\ql\f0\fs28\b\cf2 1. Demo Advanced Project\b0\cf0\par\pard\ql\f0\fs20 ------------------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 ### Demo Advanced Project Function
+<!-- doc:ref=demo_advanced_project -->
+**Description**: Demonstrate all features of the advanced project.
+**Function**: `demo_advanced_project()`
+**Parameters**:
+**Returns**: The computed result based on the function's specific operation
+**Raises**: Type-specific exceptions based on input validation requirements
+**Examples**:
+```python
+# Usage example
+result = demo_advanced_project(...)  # See function signature
+```
+**Notes**:
+- This function includes comprehensive input validation
+- Debug mode provides detailed execution tracing
+- Performance optimized for typical use cases
+- Follows Python best practices and type hints
+
+\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 result = demo_advanced_project()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 2. Calculator\b0\cf0\par\pard\ql\f0\fs20 -------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 ### Calculator Function
+<!-- doc:ref=Calculator -->
+**Description**: The `Calculator` function provides efficient and reliable operations with comprehensive error handling and optional debug capabilities.
+**Function**: `function()`
+**Parameters**:
+**Returns**: The computed result based on the function's specific operation
+**Raises**: Type-specific exceptions based on input validation requirements
+**Examples**:
+```python
+# Usage example
+result = Calculator(...)  # See function signature
+```
+**Notes**:
+- This function includes comprehensive input validation
+- Debug mode provides detailed execution tracing
+- Performance optimized for typical use cases
+- Follows Python best practices and type hints
+
+\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 calculator = Calculator()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 3. Stringprocessor\b0\cf0\par\pard\ql\f0\fs20 ------------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 Advanced string processor with various text operations.\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 stringprocessor = StringProcessor()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 4. Dataanalyzer\b0\cf0\par\pard\ql\f0\fs20 ---------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 Advanced data analyzer with statistical operations.\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 dataanalyzer = DataAnalyzer()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 5. Filemanager\b0\cf0\par\pard\ql\f0\fs20 --------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 File manager for various file operations.\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 filemanager = FileManager()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 6. Cryptoutils\b0\cf0\par\pard\ql\f0\fs20 --------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 Cryptography utilities for hashing and encoding.\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 cryptoutils = CryptoUtils()\f0\cf0\par\par\pard\ql\f0\fs20 \par\pard\ql\f0\fs28\b\cf2 7. Validator\b0\cf0\par\pard\ql\f0\fs20 ------------------------\par\pard\ql\f0\fs22\b Description:\b0\par\pard\ql\f0\fs20 Validation utilities for various data types.\par\par\pard\ql\f0\fs22\b Examples:\b0\par\pard\ql\f1\fs20\cf4 validator = Validator()\f0\cf0\par\par\pard\ql\f0\fs20 \par}
