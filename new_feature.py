@@ -17,6 +17,11 @@ def advanced_calculator():
         if b == 0:
             return "Error: Division by zero"
         return a / b
+
+    def modulo(a, b):
+        if b == 0:
+            return "Error: Modulo by zero"
+        return a % b
     
     def power(base, exponent):
         result = 1
