@@ -16,4 +16,8 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 
+def calculate_tax(income: float) -> float:
+    """Calculate tax on income at 10% rate."""
+    return income * 0.1
+
 # Test with Gemini AI documentation - 2026-01-30
