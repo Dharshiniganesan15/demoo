@@ -34,4 +34,25 @@ def max_of_two(a: float, b: float) -> float:
     """Return the larger of two numbers."""
     return a if a >= b else b
 
+def is_palindrome(text: str) -> bool:
+    """Check if a string is a palindrome (reads the same forwards and backwards).
+    
+    Args:
+        text (str): The string to check
+        
+    Returns:
+        bool: True if the string is a palindrome, False otherwise
+        
+    Examples:
+        >>> is_palindrome("racecar")
+        True
+        >>> is_palindrome("hello")
+        False
+        >>> is_palindrome("A man a plan a canal Panama")
+        True
+    """
+    # Remove non-alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in text if char.isalnum())
+    return cleaned == cleaned[::-1]
+
 # Test with Gemini AI documentation - 2026-01-30
