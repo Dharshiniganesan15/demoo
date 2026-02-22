@@ -96,3 +96,38 @@ This function calculates the nth Fibonacci number using an iterative approach. T
 *   **Zero Input (`n = 0`):** Returns `0`, which is the first number in the 0-indexed Fibonacci sequence.
 *   **One Input (`n = 1`):** Returns `1`, which is the second number in the 0-indexed Fibonacci sequence.
 ---
+
+## `factorial`
+
+Calculates the factorial of a non-negative integer.
+
+### Parameters
+
+*   `n` (`int`): A non-negative integer for which the factorial is to be calculated.
+
+### Return Value
+
+*   `int`: The factorial of `n`.
+
+### Raises
+
+*   `ValueError`: If `n` is a negative integer. Factorial is not defined for negative numbers.
+
+### Usage Examples
+
+```python
+>>> factorial(0)
+1
+>>> factorial(5)
+120
+>>> factorial(10)
+3628800
+```
+
+### Edge Cases
+
+*   **Negative Input (`n < 0`):**
+    If a negative integer is provided as input, a `ValueError` is raised, as the factorial function is not defined for negative numbers.
+*   **Zero Input (`n == 0`):**
+    For an input of `0`, the function correctly returns `1`, which is the mathematical definition of `0!`.
+---
