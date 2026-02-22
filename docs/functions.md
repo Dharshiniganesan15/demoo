@@ -19,3 +19,48 @@ def calculate_discount(price: float, discount_percent: float) -> float:
 ```
 
 ---
+
+## is_palindrome
+
+**Signature:** `def is_palindrome(text: str)`
+
+**Summary:** Check if a string is a palindrome (reads the same forwards and backwards).
+
+Args:
+    text (str): The string to check
+    
+Returns:
+    bool: True if the string is a palindrome, False otherwise
+    
+Examples:
+    >>> is_palindrome("racecar")
+    True
+    >>> is_palindrome("hello")
+    False
+    >>> is_palindrome("A man a plan a canal Panama")
+    True
+
+```python
+def is_palindrome(text: str) -> bool:
+    """Check if a string is a palindrome (reads the same forwards and backwards).
+    
+    Args:
+        text (str): The string to check
+        
+    Returns:
+        bool: True if the string is a palindrome, False otherwise
+        
+    Examples:
+        >>> is_palindrome("racecar")
+        True
+        >>> is_palindrome("hello")
+        False
+        >>> is_palindrome("A man a plan a canal Panama")
+        True
+    """
+    # Remove non-alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in text if char.isalnum())
+    return cleaned == cleaned[::-1]
+```
+
+---

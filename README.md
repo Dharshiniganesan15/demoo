@@ -23,6 +23,7 @@ Functions:
 - `calculate_discount`
 - `average`
 - `max_of_two`
+- `is_palindrome`
 
 ### `math_utils.py`
 
