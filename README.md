@@ -1,188 +1,150 @@
-This documentation provides an overview of the Python codebase, detailing the functionality found in each script and its respective functions. The information is derived directly and exclusively from the provided source code, without external assumptions or interpretations.
+This document provides comprehensive documentation for the Python codebase, derived directly and solely from the provided source files.
 
 ---
 
 # Project Documentation
 
-This project comprises several Python scripts demonstrating various functionalities, including basic mathematical operations, advanced calculation features, string manipulation, sequence generation, and a utility for managing Git operations and starting a FastAPI server.
-
-## Files
-
-The project is structured into the following Python files:
-
-*   [`demo_new_module.py`](#file-demonewmodulepy)
-*   [`main.py`](#file-mainpy)
-*   [`math_utils.py`](#file-mathutilspy)
-*   [`new_feature.py`](#file-newfeaturepy)
-*   [`start_server.py`](#file-startserverpy)
-*   [`test_feature.py`](#file-testfeaturepy)
-
----
+This project comprises several Python modules demonstrating various functionalities, including basic arithmetic operations, string manipulations, sequence calculations, an advanced calculator concept, and a server management script that integrates with Git and attempts to start a Uvicorn server.
 
 ## File: `demo_new_module.py`
 
-This file contains a simple greeting function and a demonstration of its usage.
+This module contains a simple demonstration of a greeting function and a runner.
 
 ### Functions
 
 #### `greet(name: str) -> str`
 
-Returns a greeting string.
+Returns a personalized greeting string.
 
-**Arguments:**
-
+**Parameters:**
 *   `name` (`str`): The name to greet.
 
 **Returns:**
-
-*   `str`: A greeting message, e.g., "Hello, [name]!".
+*   `str`: A greeting string, e.g., "Hello, [name]!".
 
 #### `run_demo() -> None`
 
-Executes a demonstration by calling `greet` with "AI Doc System" and printing the result.
+Executes the `greet` function with a predefined name and prints the result.
 
-### Usage Example
-
-When executed as the main script, `demo_new_module.py` will run the `run_demo` function.
+**Execution:**
+When this script is run directly, the `run_demo()` function is called.
 
 ```python
 if __name__ == "__main__":
     run_demo()
 ```
 
----
-
 ## File: `main.py`
 
-This file provides a collection of utility functions for basic arithmetic, financial calculations, comparison, string manipulation, and sequence generation.
+This module provides a collection of general-purpose utility functions covering basic arithmetic, financial calculations, comparison, string manipulation, and recursive sequence calculations.
 
 ### Functions
 
 #### `sum(a, b)`
 
-Add two numbers together.
+Adds two numbers together.
 
-**Arguments:**
-
+**Parameters:**
 *   `a`: The first number.
 *   `b`: The second number.
 
 **Returns:**
-
 *   The sum of `a` and `b`.
 
 #### `sub(a, b)`
 
-Subtract `b` from `a`.
+Subtracts `b` from `a`.
 
-**Arguments:**
-
-*   `a`: The minuend.
-*   `b`: The subtrahend.
+**Parameters:**
+*   `a`: The number to subtract from.
+*   `b`: The number to subtract.
 
 **Returns:**
-
 *   The result of `a - b`.
 
 #### `multiply(a, b)`
 
-Multiply two numbers together.
+Multiplies two numbers together.
 
-**Arguments:**
-
+**Parameters:**
 *   `a`: The first number.
 *   `b`: The second number.
 
 **Returns:**
-
 *   The product of `a` and `b`.
 
 #### `divide(a, b)`
 
-Divide `a` by `b` with zero check.
+Divides `a` by `b` with a zero check.
 
-**Arguments:**
-
+**Parameters:**
 *   `a`: The numerator.
 *   `b`: The denominator.
 
 **Returns:**
-
 *   The result of `a / b`.
 
 **Raises:**
-
 *   `ValueError`: If `b` is zero.
 
 #### `calculate_tax(income: float) -> float`
 
-Calculate tax on income at a 10% rate.
+Calculates tax on income at a 10% rate.
 
-**Arguments:**
-
+**Parameters:**
 *   `income` (`float`): The income amount.
 
 **Returns:**
-
 *   `float`: The calculated tax amount (10% of income).
 
 #### `calculate_discount(price: float, discount_percent: float) -> float`
 
-Calculate discount amount on price.
+Calculates the discount amount on a given price.
 
-**Arguments:**
-
+**Parameters:**
 *   `price` (`float`): The original price.
-*   `discount_percent` (`float`): The discount percentage (between 0 and 100).
+*   `discount_percent` (`float`): The discount percentage.
 
 **Returns:**
-
 *   `float`: The calculated discount amount.
 
 **Raises:**
-
 *   `ValueError`: If `discount_percent` is not between 0 and 100.
 
 #### `average(a: float, b: float) -> float`
 
-Return the average of two numbers.
+Returns the average of two numbers.
 
-**Arguments:**
-
+**Parameters:**
 *   `a` (`float`): The first number.
 *   `b` (`float`): The second number.
 
 **Returns:**
-
 *   `float`: The average of `a` and `b`.
 
 #### `max_of_two(a: float, b: float) -> float`
 
-Return the larger of two numbers.
+Returns the larger of two numbers.
 
-**Arguments:**
-
+**Parameters:**
 *   `a` (`float`): The first number.
 *   `b` (`float`): The second number.
 
 **Returns:**
-
-*   `float`: The larger of `a` and `b`.
+*   `float`: The larger of `a` or `b`.
 
 #### `is_palindrome(text: str) -> bool`
 
-Check if a string is a palindrome (reads the same forwards and backwards).
+Checks if a string is a palindrome (reads the same forwards and backwards).
+Non-alphanumeric characters are removed, and the string is converted to lowercase for the check.
 
-**Arguments:**
-
+**Parameters:**
 *   `text` (`str`): The string to check.
 
 **Returns:**
-
 *   `bool`: `True` if the string is a palindrome, `False` otherwise.
 
 **Examples:**
-
 ```python
 >>> is_palindrome("racecar")
 True
@@ -194,22 +156,18 @@ True
 
 #### `fibonacci(n: int) -> int`
 
-Calculate the nth Fibonacci number using iteration.
+Calculates the nth Fibonacci number using iteration. The sequence is 0-indexed (F0 = 0, F1 = 1).
 
-**Arguments:**
-
-*   `n` (`int`): The position in the Fibonacci sequence (0-indexed).
+**Parameters:**
+*   `n` (`int`): The position in the Fibonacci sequence.
 
 **Returns:**
-
 *   `int`: The nth Fibonacci number.
 
 **Raises:**
-
 *   `ValueError`: If `n` is negative.
 
 **Examples:**
-
 ```python
 >>> fibonacci(0)
 0
@@ -221,22 +179,18 @@ Calculate the nth Fibonacci number using iteration.
 
 #### `factorial(n: int) -> int`
 
-Calculate the factorial of a non-negative integer.
+Calculates the factorial of a non-negative integer.
 
-**Arguments:**
-
+**Parameters:**
 *   `n` (`int`): A non-negative integer.
 
 **Returns:**
-
 *   `int`: The factorial of `n`.
 
 **Raises:**
-
 *   `ValueError`: If `n` is negative.
 
 **Examples:**
-
 ```python
 >>> factorial(0)
 1
@@ -246,8 +200,6 @@ Calculate the factorial of a non-negative integer.
 3628800
 ```
 
----
-
 ## File: `math_utils.py`
 
 This module provides utility functions for basic mathematical operations.
@@ -256,160 +208,139 @@ This module provides utility functions for basic mathematical operations.
 
 #### `multiply(a, b)`
 
-Multiply two numbers together.
+Multiplies two numbers together.
 
-**Arguments:**
-
+**Parameters:**
 *   `a`: The first number.
 *   `b`: The second number.
 
 **Returns:**
-
 *   The product of `a` and `b`.
 
 #### `divide(a, b)`
 
-Divide two numbers.
+Divides two numbers.
 
-**Arguments:**
-
+**Parameters:**
 *   `a`: The numerator.
 *   `b`: The denominator.
 
 **Returns:**
-
 *   The result of `a / b`.
 
 **Raises:**
-
 *   `ValueError`: If `b` is zero.
 
 #### `power(base, exponent)`
 
-Calculate base raised to the power of exponent.
+Calculates `base` raised to the power of `exponent`.
 
-**Arguments:**
-
+**Parameters:**
 *   `base`: The base number.
 *   `exponent`: The exponent.
 
 **Returns:**
-
 *   The result of `base ** exponent`.
-
----
 
 ## File: `new_feature.py`
 
-This file defines an `advanced_calculator` function which encapsulates several mathematical operations as nested functions, and a `test_calculator` function to demonstrate their usage.
+This module defines an `advanced_calculator` function which internally defines several arithmetic and mathematical operations. It also includes a `test_calculator` function that attempts to test these operations.
 
 ### Functions
 
 #### `advanced_calculator()`
 
-Advanced calculator with multiple operations.
-Supports addition, subtraction, multiplication, and division.
+An advanced calculator function with multiple operations.
+This function locally defines nested functions for addition, subtraction, multiplication, division, modulo, power, and factorial. These nested functions are only accessible within the scope of `advanced_calculator` itself and are not directly exposed or returned by `advanced_calculator`.
 
-This function defines the following nested operations:
+**Nested Functions (locally defined within `advanced_calculator`):**
 
-*   **`add(a, b)`**: Returns `a + b`.
-*   **`subtract(a, b)`**: Returns `a - b`.
-*   **`multiply(a, b)`**: Returns `a * b`.
-*   **`divide(a, b)`**: Returns `a / b`, or "Error: Division by zero" if `b` is 0.
-*   **`modulo(a, b)`**: Returns `a % b`, or "Error: Modulo by zero" if `b` is 0.
-*   **`power(base, exponent)`**: Calculates `base` raised to `exponent` using iteration.
-*   **`factorial(n)`**: Calculates the factorial of `n`. Returns 1 if `n` is 0. Returns "Error: Negative number" if `n` is negative.
+*   `add(a, b)`: Returns the sum of `a` and `b`.
+*   `subtract(a, b)`: Returns the result of `a - b`.
+*   `multiply(a, b)`: Returns the product of `a` and `b`.
+*   `divide(a, b)`: Returns the result of `a / b`. Returns "Error: Division by zero" if `b` is 0.
+*   `modulo(a, b)`: Returns the result of `a % b`. Returns "Error: Modulo by zero" if `b` is 0.
+*   `power(base, exponent)`: Calculates `base` raised to the `exponent` using a loop.
+*   `factorial(n)`: Calculates the factorial of `n`. Returns "Error: Negative number" if `n` is negative. Returns 1 if `n` is 0.
 
 #### `test_calculator()`
 
-Test the advanced calculator. This function attempts to call the nested operations defined within `advanced_calculator` as if they were attributes of `advanced_calculator` and prints test results for addition, subtraction, multiplication, division, power, and factorial.
+Attempts to test the operations defined within `advanced_calculator`. The test tries to access the nested functions using `advanced_calculator.add`, `advanced_calculator.subtract`, etc. and prints the results with pass/fail indicators.
 
-### Usage Example
-
-When executed as the main script, `new_feature.py` will run the `test_calculator` function.
+**Execution:**
+When this script is run directly, the `test_calculator()` function is called.
 
 ```python
 if __name__ == "__main__":
     test_calculator()
 ```
 
----
-
 ## File: `start_server.py`
 
-This script is designed to automate Git operations (add, commit, push) and then start a FastAPI server using `uvicorn`.
+This script is designed to automate a sequence of Git operations (add, commit, push) and then start a FastAPI server using Uvicorn.
 
 ### Functions
 
 #### `run_command(cmd, cwd=None)`
 
-Run a command and return the result.
+Runs a shell command and captures its output. It prints success/error messages and the command's standard output if successful.
 
-**Arguments:**
-
-*   `cmd` (`str`): The command string to execute in the shell.
-*   `cwd` (`str`, `optional`): The current working directory for the command. Defaults to `None` (current directory).
+**Parameters:**
+*   `cmd` (`str`): The command string to execute.
+*   `cwd` (`str`, optional): The working directory for the command. Defaults to `None` (current directory).
 
 **Returns:**
-
-*   `bool`: `True` if the command executed successfully (return code 0), `False` otherwise. Prints error messages to `stderr` and command output to `stdout`.
+*   `bool`: `True` if the command executed successfully (return code 0), `False` otherwise.
 
 #### `main()`
 
-Main function to start server with single git push.
+The main function orchestrates the Git operations and server startup.
 
-This function performs the following sequence of operations:
-1.  Determines the project root and current `demoo` directory.
-2.  Changes the current working directory to `demoo_dir`.
-3.  Adds all changes to Git using `git add .`.
-4.  Commits changes to Git with an auto-generated timestamped commit message.
-5.  Pushes committed changes to the remote Git repository using `git push`.
-6.  Changes the current working directory back to `project_root`.
-7.  Starts a `uvicorn` server for the `backend.app:app` application, listening on `0.0.0.0:8000` with `reload` enabled and `log_level` set to "info".
-8.  Provides instructions for stopping the server and displays a webhook URL (hardcoded: `https://da3b21fd5fff.ngrok-free.app/webhook/git`).
-9.  Handles `KeyboardInterrupt` to gracefully stop the server and other exceptions during server startup.
+1.  **Directory Navigation:** Determines the project root and the script's directory.
+2.  **Git Operations:**
+    *   Changes to the script's directory (`demoo_dir`).
+    *   Executes `git add .` to stage all changes.
+    *   Executes `git commit -m "Auto-update documentation - [timestamp]"` with a timestamped commit message.
+    *   Executes `git push` to push committed changes to the remote repository.
+3.  **Server Startup:**
+    *   Changes to the `project_root` directory.
+    *   Attempts to import `uvicorn`.
+    *   Starts a Uvicorn server, configured to run `backend.app:app` on `0.0.0.0:8000` with `reload=True` and `log_level="info"`.
+    *   Prints expected server URL and a webhook URL (`https://da3b21fd5fff.ngrok-free.app/webhook/git`).
+    *   Handles `KeyboardInterrupt` for graceful shutdown and other exceptions during server startup.
 
-**Returns:**
+**Execution:**
+When this script is run directly, the `main()` function is called.
 
-*   `bool`: `True` if all operations complete successfully, `False` if any step fails.
-
-### Usage Example
-
-To run the Git operations and start the server, execute the script directly:
-
-```bash
-python3 start_server.py
+```python
+if __name__ == "__main__":
+    main()
 ```
-
-This will automatically add, commit, and push current changes, then launch the server.
-
----
 
 ## File: `test_feature.py`
 
-This file implements a dynamic programming approach to calculate Fibonacci numbers and includes a test function to verify its correctness.
+This module provides an implementation for calculating Fibonacci numbers using dynamic programming and includes a dedicated test function for it.
 
 ### Functions
 
 #### `calculate_fibonacci(n)`
 
-Calculate the nth Fibonacci number using dynamic programming.
+Calculates the nth Fibonacci number using dynamic programming.
+The function initializes a DP table and fills it iteratively.
 
-**Arguments:**
-
+**Parameters:**
 *   `n` (`int`): The position in the Fibonacci sequence.
 
 **Returns:**
-
-*   `int`: The nth Fibonacci number. Returns 0 for `n <= 0`, and 1 for `n = 1` or `n = 2`.
+*   `int`: The nth Fibonacci number. Returns 0 for `n <= 0`, 1 for `n = 1`, and 1 for `n = 2` as base cases before DP table computation.
 
 #### `test_fibonacci()`
 
-Test the Fibonacci function. This function runs `calculate_fibonacci` against a predefined set of test cases (0, 1, 2, 3, 5, 8, 13, 21, 34 corresponding to `fib(0)` through `fib(8)`) and prints whether each test case passes or fails.
+Tests the `calculate_fibonacci` function against a predefined set of test cases.
+It prints the input `n`, the calculated result, the expected result, and a pass/fail status for each test case.
 
-### Usage Example
-
-When executed as the main script, `test_feature.py` will run the `test_fibonacci` function.
+**Execution:**
+When this script is run directly, the `test_fibonacci()` function is called.
 
 ```python
 if __name__ == "__main__":
