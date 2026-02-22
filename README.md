@@ -53,7 +53,3 @@ Functions:
 
 - `calculate_fibonacci`
 - `test_fibonacci`
-
-## Function Docs
-
-See [docs/functions.md](docs/functions.md) for detailed function documentation.
