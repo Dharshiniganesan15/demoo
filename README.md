@@ -107,6 +107,31 @@ Divides the first number (`a`) by the second number (`b`), with a check for divi
 
 *   `ValueError`: If `b` is `0`, indicating an attempt to divide by zero.
 
+#### `calculate_tax(income: float) -> float`
+
+Calculates tax for a given income at a fixed 10% rate.
+
+**Parameters:**
+
+*   `income` (`float`): The taxable income amount.
+
+**Returns:**
+
+*   `float`: The computed tax amount (`income * 0.1`).
+
+#### `average(a: float, b: float) -> float`
+
+Calculates the arithmetic mean of two numbers.
+
+**Parameters:**
+
+*   `a` (`float`): First value.
+*   `b` (`float`): Second value.
+
+**Returns:**
+
+*   `float`: The average value `((a + b) / 2)`.
+
 **Internal Notes:**
 
 *   A comment indicates "Test with Gemini AI documentation - 2026-01-30".
