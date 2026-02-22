@@ -64,3 +64,35 @@ def is_palindrome(text: str) -> bool:
 ```
 
 ---
+
+## `fibonacci`
+
+### Brief Description
+
+This function calculates the nth Fibonacci number using an iterative approach. The sequence is 0-indexed.
+
+### Parameters
+
+*   **`n`** (`int`): The position in the Fibonacci sequence for which to calculate the number. It is 0-indexed, meaning `fibonacci(0)` returns the first number, `fibonacci(1)` the second, and so on.
+
+### Return Value
+
+*   `int`: The nth Fibonacci number corresponding to the input position `n`.
+
+### Usage Example
+
+```python
+>>> fibonacci(0)
+0
+>>> fibonacci(1)
+1
+>>> fibonacci(10)
+55
+```
+
+### Edge Cases
+
+*   **Negative Input (`n < 0`):** The function raises a `ValueError` with the message "Fibonacci number is not defined for negative numbers" because Fibonacci numbers are typically defined for non-negative integers.
+*   **Zero Input (`n = 0`):** Returns `0`, which is the first number in the 0-indexed Fibonacci sequence.
+*   **One Input (`n = 1`):** Returns `1`, which is the second number in the 0-indexed Fibonacci sequence.
+---
