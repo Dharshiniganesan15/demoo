@@ -379,3 +379,7 @@ Testing Fibonacci function:
   fib(4) = 5 (expected 8) ❌ FAIL # Same discrepancy as above. The test_cases array elements are fib(0), fib(1), fib(2), fib(3), fib(4), fib(5), fib(6), fib(7), fib(8) according to the enumerate loop.
   ...
 ```
+
+## Function Docs
+
+See [docs/functions.md](docs/functions.md) for detailed function documentation.
