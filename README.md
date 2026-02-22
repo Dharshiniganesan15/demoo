@@ -24,6 +24,7 @@ Functions:
 - `average`
 - `max_of_two`
 - `is_palindrome`
+- `fibonacci`
 
 ### `math_utils.py`
 
