@@ -20,6 +20,12 @@ def calculate_tax(income: float) -> float:
     """Calculate tax on income at 10% rate."""
     return income * 0.1
 
+def calculate_discount(price: float, discount_percent: float) -> float:
+    """Calculate discount amount on price."""
+    if discount_percent < 0 or discount_percent > 100:
+        raise ValueError("Discount percent must be between 0 and 100")
+    return price * (discount_percent / 100)
+
 def average(a: float, b: float) -> float:
     """Return the average of two numbers."""
     return (a + b) / 2
