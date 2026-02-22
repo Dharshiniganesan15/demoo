@@ -24,4 +24,8 @@ def average(a: float, b: float) -> float:
     """Return the average of two numbers."""
     return (a + b) / 2
 
+def max_of_two(a: float, b: float) -> float:
+    """Return the larger of two numbers."""
+    return a if a >= b else b
+
 # Test with Gemini AI documentation - 2026-01-30
