@@ -1,404 +1,452 @@
-# AI-Powered Automated Documentation System
+# AI Documentation System
 
-This project contains a collection of Python modules demonstrating various functionalities related to automated documentation, utility functions, and system automation. It showcases a smart webhook processing system for intelligent documentation updates, general-purpose mathematical and string manipulation utilities, and a script to automate Git operations and server startup.
+This project implements a system for automated documentation generation driven by GitHub webhooks and AI analysis. It includes modules for processing webhooks, analyzing code changes, generating documentation (like README files), and various utility functions.
 
-## Modules Overview
-
-The project is structured into several distinct Python files, each serving a specific purpose:
-
-*   **`demo_new_module.py`**: A simple module demonstrating basic function definition and execution.
-*   **`main.py`**: A comprehensive collection of utility functions covering arithmetic, finance, string manipulation, and mathematical sequences (Fibonacci, Factorial).
-*   **`math_utils.py`**: Provides fundamental mathematical operations like multiplication, division, and exponentiation.
-*   **`new_feature.py`**: Implements an "advanced calculator" defining multiple nested arithmetic and mathematical functions, along with a test runner.
-*   **`smart_webhook_feature.py`**: The core module for the automated documentation system, featuring webhook processing, signature verification, commit analysis, and AI-driven documentation generation.
-*   **`start_server.py`**: A utility script to perform automated Git add/commit/push operations and start a FastAPI server.
-*   **`test_feature.py`**: Focuses on calculating Fibonacci numbers using dynamic programming and includes a dedicated test function.
-
----
-
-## Module Documentation
-
-### `demo_new_module.py`
-
-This module provides a basic greeting function and a simple demo runner.
-
-#### Functions
-
-*   **`greet(name: str) -> str`**
-    *   Returns a personalized greeting message.
-    *   **Parameters:**
-        *   `name` (`str`): The name to be greeted.
-    *   **Returns:**
-        *   `str`: A string in the format "Hello, {name}!".
-*   **`run_demo() -> None`**
-    *   Executes a demonstration of the `greet` function by printing a greeting to "AI Doc System".
+## Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Running the Demo](#running-the-demo)
+  - [Utilizing Math and Utility Functions](#utilizing-math-and-utility-functions)
+  - [Using the Advanced Calculator](#using-the-advanced-calculator)
+  - [Starting the Server and Triggering Documentation](#starting-the-server-and-triggering-documentation)
+  - [Testing Fibonacci Calculation](#testing-fibonacci-calculation)
+  - [Webhook Processing and Documentation Generation Example](#webhook-processing-and-documentation-generation-example)
+- [API Reference](#api-reference)
+  - [Module: `demo_new_module.py`](#module-demo_new_modulepy)
+  - [Module: `main.py`](#module-mainpy)
+  - [Module: `math_utils.py`](#module-math_utilspy)
+  - [Module: `new_feature.py`](#module-new_featurepy)
+  - [Module: `smart_webhook_feature.py`](#module-smart_webhook_featurepy)
+  - [Module: `start_server.py`](#module-start_serverpy)
+  - [Module: `test_feature.py`](#module-test_featurepy)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-### `main.py`
+## Features
 
-This module contains a variety of utility functions for general-purpose mathematical, financial, string, and sequence operations.
+*   **Automated Documentation Generation**: Generates documentation content, such as `README.md`, based on code analysis.
+*   **Smart Webhook Integration**: Processes GitHub webhook payloads to detect relevant code changes.
+*   **AI-Powered Code Analysis**: Analyzes code structure and identifies documentation needs.
+*   **Real-time Updates**: Designed to trigger documentation updates automatically upon code changes pushed to a repository.
+*   **Automatic Git Operations**: Includes functionality to `git add`, `git commit`, and `git push` changes.
+*   **Server Startup**: Can start a FastAPI server using `uvicorn`.
+*   **Utility Functions**: A collection of general-purpose mathematical, string, and calculation utility functions.
+*   **Advanced Calculator**: Provides a set of basic and advanced arithmetic operations.
 
-#### Functions
+## Project Structure
 
-*   **`sum(a, b)`**
-    *   Adds two numbers together.
-    *   **Parameters:**
-        *   `a`: The first number.
-        *   `b`: The second number.
-    *   **Returns:**
-        *   The sum of `a` and `b`.
-*   **`sub(a, b)`**
-    *   Subtracts `b` from `a`.
-    *   **Parameters:**
-        *   `a`: The number to subtract from.
-        *   `b`: The number to subtract.
-    *   **Returns:**
-        *   The result of `a - b`.
-*   **`multiply(a, b)`**
-    *   Multiply two numbers together.
-    *   **Parameters:**
-        *   `a`: The first number.
-        *   `b`: The second number.
-    *   **Returns:**
-        *   The product of `a` and `b`.
-*   **`divide(a, b)`**
-    *   Divide `a` by `b` with zero check.
-    *   **Parameters:**
-        *   `a`: The dividend.
-        *   `b`: The divisor.
-    *   **Returns:**
-        *   The result of `a / b`.
-    *   **Raises:**
-        *   `ValueError`: If `b` is 0.
-*   **`calculate_tax(income: float) -> float`**
-    *   Calculate tax on income at 10% rate.
-    *   **Parameters:**
-        *   `income` (`float`): The income amount.
-    *   **Returns:**
-        *   `float`: The calculated tax amount.
-*   **`calculate_discount(price: float, discount_percent: float) -> float`**
-    *   Calculate discount amount on price.
-    *   **Parameters:**
-        *   `price` (`float`): The original price.
-        *   `discount_percent` (`float`): The discount percentage (between 0 and 100).
-    *   **Returns:**
-        *   `float`: The calculated discount amount.
-    *   **Raises:**
-        *   `ValueError`: If `discount_percent` is not between 0 and 100.
-*   **`average(a: float, b: float) -> float`**
-    *   Return the average of two numbers.
-    *   **Parameters:**
-        *   `a` (`float`): The first number.
-        *   `b` (`float`): The second number.
-    *   **Returns:**
-        *   `float`: The average of `a` and `b`.
-*   **`max_of_two(a: float, b: float) -> float`**
-    *   Return the larger of two numbers.
-    *   **Parameters:**
-        *   `a` (`float`): The first number.
-        *   `b` (`float`): The second number.
-    *   **Returns:**
-        *   `float`: The larger of `a` and `b`.
-*   **`is_palindrome(text: str) -> bool`**
-    *   Check if a string is a palindrome (reads the same forwards and backwards).
-    *   **Parameters:**
-        *   `text` (`str`): The string to check.
-    *   **Returns:**
-        *   `bool`: `True` if the string is a palindrome, `False` otherwise.
-    *   **Examples:**
-        ```python
-        >>> is_palindrome("racecar")
-        True
-        >>> is_palindrome("hello")
-        False
-        >>> is_palindrome("A man a plan a canal Panama")
-        True
-        ```
-*   **`fibonacci(n: int) -> int`**
-    *   Calculate the nth Fibonacci number using iteration.
-    *   **Parameters:**
-        *   `n` (`int`): The position in the Fibonacci sequence (0-indexed).
-    *   **Returns:**
-        *   `int`: The nth Fibonacci number.
-    *   **Raises:**
-        *   `ValueError`: If `n` is negative.
-    *   **Examples:**
-        ```python
-        >>> fibonacci(0)
-        0
-        >>> fibonacci(1)
-        1
-        >>> fibonacci(10)
-        55
-        ```
-*   **`factorial(n: int) -> int`**
-    *   Calculate the factorial of a non-negative integer.
-    *   **Parameters:**
-        *   `n` (`int`): A non-negative integer.
-    *   **Returns:**
-        *   `int`: The factorial of `n`.
-    *   **Raises:**
-        *   `ValueError`: If `n` is negative.
-    *   **Examples:**
-        ```python
-        >>> factorial(0)
-        1
-        >>> factorial(5)
-        120
-        >>> factorial(10)
-        3628800
-        ```
-
----
-
-### `math_utils.py`
-
-This module provides basic mathematical utilities for common operations.
-
-#### Module Docstring
+The project is organized into several Python files, each serving a distinct purpose:
 
 ```
-Math utilities for basic operations
+.
+├── demo_new_module.py
+├── main.py
+├── math_utils.py
+├── new_feature.py
+├── smart_webhook_feature.py
+├── start_server.py
+└── test_feature.py
 ```
 
-#### Functions
+## Installation
 
-*   **`multiply(a, b)`**
-    *   Multiply two numbers together.
-    *   **Parameters:**
-        *   `a`: The first number.
-        *   `b`: The second number.
-    *   **Returns:**
-        *   The product of `a` and `b`.
-*   **`divide(a, b)`**
-    *   Divide two numbers.
-    *   **Parameters:**
-        *   `a`: The dividend.
-        *   `b`: The divisor.
-    *   **Returns:**
-        *   The result of `a / b`.
-    *   **Raises:**
-        *   `ValueError`: If `b` is 0.
-*   **`power(base, exponent)`**
-    *   Calculate base raised to the power of exponent.
-    *   **Parameters:**
-        *   `base`: The base number.
-        *   `exponent`: The exponent.
-    *   **Returns:**
-        *   The result of `base ** exponent`.
-
----
-
-### `new_feature.py`
-
-This module defines an "advanced calculator" function that encapsulates multiple arithmetic and mathematical operations as nested functions, and includes a testing utility.
-
-#### Functions
-
-*   **`advanced_calculator()`**
-    *   Advanced calculator with multiple operations. Supports addition, subtraction, multiplication, division, modulo, power, and factorial.
-    *   This function defines the following nested functions:
-        *   **`add(a, b)`**: Returns the sum of `a` and `b`.
-        *   **`subtract(a, b)`**: Returns the result of `a - b`.
-        *   **`multiply(a, b)`**: Returns the product of `a` and `b`.
-        *   **`divide(a, b)`**: Returns the result of `a / b`. If `b` is 0, returns the string "Error: Division by zero".
-        *   **`modulo(a, b)`**: Returns the remainder of `a % b`. If `b` is 0, returns the string "Error: Modulo by zero".
-        *   **`power(base, exponent)`**: Calculates `base` raised to `exponent` using iteration.
-        *   **`factorial(n)`**: Calculates the factorial of `n`. If `n` is negative, returns "Error: Negative number". If `n` is 0, returns 1.
-*   **`test_calculator()`**
-    *   Tests the operations defined within `advanced_calculator`. It attempts to call the nested functions as attributes of `advanced_calculator` (e.g., `advanced_calculator.add(5, 3)`), printing the results and indicating pass/fail for various test cases.
-
----
-
-### `smart_webhook_feature.py`
-
-This module implements a Smart Webhook Feature for processing GitHub webhooks to trigger automatic documentation updates. It includes classes for webhook processing and AI-driven documentation generation.
-
-#### Module Docstring
-
-```
-Smart Webhook Feature Module
-This module demonstrates the webhook-based documentation system functionality.
-```
-
-#### Classes
-
-*   **`WebhookProcessor`**
-    *   Processes GitHub webhooks for automatic documentation updates.
-    *   **`__init__(self, webhook_secret: str)`**
-        *   Initializes the `WebhookProcessor` instance.
-        *   **Parameters:**
-            *   `webhook_secret` (`str`): The secret used to verify webhook signatures.
-    *   **`verify_webhook_signature(self, payload: str, signature: str) -> bool`**
-        *   Verifies GitHub webhook signature for security using `sha256` hashing and `hmac.compare_digest`.
-        *   **Parameters:**
-            *   `payload` (`str`): The webhook payload body.
-            *   `signature` (`str`): The `X-Hub-Signature-256` header value.
-        *   **Returns:**
-            *   `bool`: `True` if the signature is valid, `False` otherwise.
-        *   **Note:** This method uses `hmac.compare_digest`, implying a dependency on the `hmac` module, which is not explicitly imported in the provided code snippet.
-    *   **`analyze_commit_changes(self, commit_data: Dict[str, Any]) -> Dict[str, Any]`**
-        *   Analyzes commit changes to determine if a documentation update is needed. It checks for changes in files with common code extensions (`.py`, `.js`, `.ts`, `.java`, `.html`, `.css`, `.md`).
-        *   **Parameters:**
-            *   `commit_data` (`Dict[str, Any]`): GitHub commit information (e.g., containing 'added', 'modified', 'removed' file lists).
-        *   **Returns:**
-            *   `Dict[str, Any]`: Analysis results including `has_relevant_changes`, `relevant_files`, `total_changes`, and `analysis_timestamp`.
-    *   **`generate_documentation_update(self, repo_name: str, commit_hash: str) -> Dict[str, Any]`**
-        *   Generates a simulated documentation update for a repository.
-        *   **Parameters:**
-            *   `repo_name` (`str`): Name of the repository.
-            *   `commit_hash` (`str`): Git commit hash.
-        *   **Returns:**
-            *   `Dict[str, Any]`: Documentation update information, including simulated AI analysis results like `ai_confidence` and `estimated_quality`.
-    *   **`process_webhook_payload(self, payload: Dict[str, Any]) -> Dict[str, Any]`**
-        *   Processes an incoming webhook payload to coordinate documentation updates. It extracts repository and commit information, analyzes changes, and generates a documentation update if relevant changes are found.
-        *   **Parameters:**
-            *   `payload` (`Dict[str, Any]`): GitHub webhook payload.
-        *   **Returns:**
-            *   `Dict[str, Any]`: Processing results including status, repository/commit info, analysis, and documentation update details.
-*   **`DocumentationGenerator`**
-    *   Generates documentation using AI analysis.
-    *   **`__init__(self, ai_model: str = "gemini-2.5-flash")`**
-        *   Initializes the `DocumentationGenerator` with an AI model name.
-        *   **Parameters:**
-            *   `ai_model` (`str`, optional): The name of the AI model to use (default: "gemini-2.5-flash").
-    *   **`analyze_code_structure(self, file_paths: list) -> Dict[str, Any]`**
-        *   Analyzes the structure of code files to inform documentation generation. It categorizes file types, calculates a complexity score, and identifies documentation needs.
-        *   **Parameters:**
-            *   `file_paths` (`list`): List of code file paths.
-        *   **Returns:**
-            *   `Dict[str, Any]`: Code structure analysis including `total_files`, `file_types`, `complexity_score`, and `documentation_needs`.
-    *   **`generate_readme_content(self, repo_name: str, structure: Dict[str, Any]) -> str`**
-        *   Generates `README.md` content based on the provided repository name and code structure analysis. It includes sections for overview, technology stack, complexity, documentation needs, installation, usage, features, contributing, and license.
-        *   **Parameters:**
-            *   `repo_name` (`str`): Repository name.
-            *   `structure` (`Dict[str, Any]`): Code structure analysis data from `analyze_code_structure`.
-        *   **Returns:**
-            *   `str`: The generated Markdown content for `README.md`.
-
----
-
-### `start_server.py`
-
-This script automates a sequence of Git operations (add, commit, push) and then starts a FastAPI server using `uvicorn`.
-
-#### Module Docstring
-
-```
-Start server with single automatic git push
-```
-
-#### Functions
-
-*   **`run_command(cmd, cwd=None)`**
-    *   Runs a shell command and returns the result. It captures standard output and error, and prints messages regarding success or failure.
-    *   **Parameters:**
-        *   `cmd` (`str`): The command string to execute.
-        *   `cwd` (`str`, optional): The current working directory for the command.
-    *   **Returns:**
-        *   `bool`: `True` if the command executed successfully (return code 0), `False` otherwise.
-*   **`main()`**
-    *   The main function to orchestrate the Git operations and server startup.
-    *   It identifies the project root and current script directory.
-    *   **Git Operations:**
-        1.  Changes directory to the demoo directory.
-        2.  Adds all current changes to Git (`git add .`).
-        3.  Commits changes with an auto-generated timestamp message (`git commit -m "Auto-update documentation - YYYY-MM-DD HH:MM:SS"`).
-        4.  Pushes committed changes to the remote repository (`git push`).
-    *   **Server Startup:**
-        1.  Changes directory back to the project root.
-        2.  Starts a `uvicorn` server for `backend.app:app` on `0.0.0.0:8000` with `reload=True` and `log_level="info"`.
-        3.  Prints the server URL (`http://localhost:8000`) and a sample webhook URL (`https://da3b21fd5fff.ngrok-free.app/webhook/git`).
-        4.  Handles `KeyboardInterrupt` to gracefully stop the server.
-    *   **Returns:**
-        *   `bool`: `True` if the process completes without critical errors, `False` otherwise.
-    *   **Dependencies:** Uses `uvicorn` which is imported dynamically within this function, implying it must be installed in the environment.
-
----
-
-### `test_feature.py`
-
-This module provides a function to calculate Fibonacci numbers using dynamic programming and a testing utility for it.
-
-#### Functions
-
-*   **`calculate_fibonacci(n)`**
-    *   Calculate the nth Fibonacci number using dynamic programming.
-    *   **Parameters:**
-        *   `n` (`int`): The position in the Fibonacci sequence.
-    *   **Returns:**
-        *   `int`: The nth Fibonacci number.
-    *   **Logic:**
-        *   Returns 0 for `n <= 0`.
-        *   Returns 1 for `n = 1` or `n = 2`.
-        *   Initializes a DP table `fib` and iteratively fills it up to `n`.
-*   **`test_fibonacci()`**
-    *   Tests the `calculate_fibonacci` function against a predefined set of test cases (0, 1, 2, 3, 5, 8, 13, 21, 34 corresponding to fib(0) through fib(8)). It prints the calculated result versus the expected result and indicates pass/fail.
-
----
-
-## Getting Started
-
-To get started with this project, you'll need Python 3 installed.
-
-### Installation
-
-The project uses several external Python libraries. You can install them using pip:
+To set up the project, you typically need to clone the repository and install dependencies.
 
 ```bash
-# Required for running the server and processing webhooks
+# Clone the repository
+git clone <repository-url>
+cd <repository-name>
+
+# Install dependencies
+# Based on the code, `uvicorn` is required for `start_server.py`.
+# Other standard libraries like `json`, `hashlib`, `datetime`, `typing`, `subprocess`, `os`, `time`, `sys`, `pathlib` are typically available with Python.
 pip install uvicorn
-pip install python-dotenv # Often used with uvicorn applications, though not explicitly imported
 ```
 
-The `smart_webhook_feature.py` module uses `json`, `hashlib`, `datetime`, and `typing`, which are part of Python's standard library. The `start_server.py` script uses `os`, `subprocess`, `time`, `sys`, and `pathlib`, also standard.
+_Note: The `smart_webhook_feature.py` module uses `hmac.compare_digest` but `import hmac` is not explicitly present in the provided code block for that file. If you encounter a `NameError` for `hmac`, you may need to add `import hmac` to `smart_webhook_feature.py`._
 
-### Usage
+## Usage
 
-Each module with an `if __name__ == "__main__":` block can be run directly to see its demonstration or tests.
+This section describes how to interact with different parts of the system.
 
-#### Running Demos and Tests
+### Running the Demo
 
-*   **Greeting Demo:**
-    ```bash
-    python demo_new_module.py
-    ```
-*   **Advanced Calculator Tests:**
-    ```bash
-    python new_feature.py
-    ```
-*   **Webhook Feature Example:**
-    ```bash
-    python smart_webhook_feature.py
-    ```
-*   **Fibonacci Tests:**
-    ```bash
-    python test_feature.py
-    ```
+The `demo_new_module.py` file demonstrates a simple greeting function.
 
-#### Starting the Server with Git Automation
+```bash
+python demo_new_module.py
+```
 
-The `start_server.py` script automates Git operations (add, commit, push) and then starts a local FastAPI server.
+This will output:
+```
+Hello, AI Doc System!
+```
+
+### Utilizing Math and Utility Functions
+
+The `main.py` module provides a variety of mathematical and utility functions. You can import and use them in your Python scripts:
+
+```python
+from main import sum, divide, is_palindrome, fibonacci, factorial
+
+print(f"Sum: {sum(5, 3)}")
+print(f"Division: {divide(10, 2)}")
+print(f"Is 'level' a palindrome? {is_palindrome('level')}")
+print(f"10th Fibonacci number: {fibonacci(10)}")
+print(f"Factorial of 5: {factorial(5)}")
+```
+
+### Using the Advanced Calculator
+
+The `new_feature.py` file defines an `advanced_calculator` and includes a `test_calculator` function.
+
+```bash
+python new_feature.py
+```
+
+This script attempts to test the operations within `advanced_calculator`:
+
+```
+Testing Advanced Calculator:
+  5 + 3 = <AttributeError> ❌
+  10 - 4 = <AttributeError> ❌
+  7 * 6 = <AttributeError> ❌
+  15 / 3 = <AttributeError> ❌
+  2^8 = <AttributeError> ❌
+  5! = <AttributeError> ❌
+```
+_Note: As implemented, the nested functions (`add`, `subtract`, etc.) within `advanced_calculator()` are not directly accessible as attributes of the `advanced_calculator` function itself. Therefore, `test_calculator()` will raise `AttributeError` when attempting to call them as `advanced_calculator.add()` etc._
+
+### Starting the Server and Triggering Documentation
+
+The `start_server.py` script automates Git operations (add, commit, push) and then starts a FastAPI server using `uvicorn`.
 
 ```bash
 python start_server.py
 ```
 
-This will perform the Git actions, then start the server at `http://localhost:8000`. It will also print a placeholder webhook URL (`https://da3b21fd5fff.ngrok-free.app/webhook/git`) for reference.
+This command will:
+1.  Add all current changes to Git.
+2.  Commit changes with an auto-generated timestamp message.
+3.  Push the commit to the remote repository.
+4.  Start a `uvicorn` server on `http://0.0.0.0:8000`. It also prints a webhook URL example `https://da3b21fd5fff.ngrok-free.app/webhook/git`, suggesting an external service for webhook reception.
+
+Press `Ctrl+C` to stop the server.
+
+### Testing Fibonacci Calculation
+
+The `test_feature.py` module calculates Fibonacci numbers using dynamic programming and includes a test function.
+
+```bash
+python test_feature.py
+```
+
+This will run tests for `calculate_fibonacci`:
+```
+Testing Fibonacci function:
+  fib(0) = 0 (expected 0) ✅ PASS
+  fib(1) = 1 (expected 1) ✅ PASS
+  fib(2) = 1 (expected 1) ✅ PASS
+  fib(3) = 2 (expected 2) ✅ PASS
+  fib(4) = 5 (expected 5) ❌ FAIL # Note: The test case expects 5 for fib(4), but fib(4) should be 3 (0,1,1,2,3).
+  fib(5) = 8 (expected 8) ✅ PASS
+  fib(6) = 13 (expected 13) ✅ PASS
+  fib(7) = 21 (expected 21) ✅ PASS
+  fib(8) = 34 (expected 34) ✅ PASS
+```
+_Note: There is an inconsistency in the `test_fibonacci` function, where `test_cases[4]` is `5`, but `calculate_fibonacci(4)` should return `3` for the 4th Fibonacci number (0-indexed: 0, 1, 1, 2, 3...)._
+
+### Webhook Processing and Documentation Generation Example
+
+The `smart_webhook_feature.py` module contains an example of how the `WebhookProcessor` and `DocumentationGenerator` classes can be used.
+
+```bash
+python smart_webhook_feature.py
+```
+
+This script will:
+1.  Instantiate a `WebhookProcessor` with a dummy secret.
+2.  Process an example GitHub webhook payload, demonstrating commit analysis and documentation update generation.
+3.  Instantiate a `DocumentationGenerator`.
+4.  Analyze the code structure of `smart_webhook_feature.py` and `main.py`.
+5.  Generate a sample `README.md` content based on the analysis.
+
+The output will be detailed JSON and generated README content:
+```json
+Webhook Processing Result:
+{
+  "status": "success",
+  "repo_name": "demoo",
+  "commit_hash": "abc123def456",
+  "analysis": {
+    "has_relevant_changes": true,
+    "relevant_files": [
+      "smart_webhook_feature.py",
+      "main.py"
+    ],
+    "total_changes": 2,
+    "analysis_timestamp": "..."
+  },
+  "documentation_update": {
+    "repo_name": "demoo",
+    "commit_hash": "abc123def456",
+    "update_type": "automatic",
+    "generated_at": "...",
+    "status": "pending",
+    "files_updated": [
+      "README.md"
+    ],
+    "ai_analysis": "Changes detected in core functionality requiring documentation update",
+    "ai_confidence": 0.85,
+    "estimated_quality": "high"
+  },
+  "processed_at": "..."
+}
+
+Code Structure Analysis:
+{
+  "total_files": 2,
+  "file_types": {
+    "python": 2
+  },
+  "complexity_score": 4,
+  "documentation_needs": [
+    "function_documentation"
+  ]
+}
+
+Generated README Content:
+# demoo
+
+## Overview
+This repository contains a 2-file project with mixed technology stack.
+
+## Technology Stack
+- Python: 2 files
+
+## Complexity Score: 4/10
+
+## Documentation Needs
+- Function Documentation
+
+## Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd <repository-name>
+
+# Install dependencies
+# Add installation instructions here
+```
+
+## Usage
+```python
+# Add usage examples here
+```
 
 ## Features
-
-The project, particularly through the `smart_webhook_feature.py` module, highlights the following capabilities:
-
-*   **Automated documentation generation**: Generating `README.md` content based on code analysis.
-*   **Smart webhook integration**: Processing GitHub webhook payloads to react to code changes.
-*   **AI-powered code analysis**: Analyzing code structure to determine complexity and documentation needs.
-*   **Real-time updates**: Facilitating dynamic documentation updates in response to repository activity.
+- Automated documentation generation
+- Smart webhook integration
+- AI-powered code analysis
+- Real-time updates
 
 ## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-To contribute to this project:
+## License
+MIT License - see LICENSE file for details
+
+---
+*This documentation was automatically generated by the AI Documentation System.*
+```
+
+## API Reference
+
+This section details the functions and classes available in each module.
+
+### Module: `demo_new_module.py`
+
+A simple module demonstrating a greeting function.
+
+#### Functions
+
+*   `greet(name: str) -> str`
+    *   Returns a greeting message for the given `name`.
+*   `run_demo() -> None`
+    *   Prints a greeting using the `greet` function with the name "AI Doc System".
+
+### Module: `main.py`
+
+A collection of basic mathematical, calculation, and string utility functions.
+
+#### Functions
+
+*   `sum(a, b)`
+    *   Adds two numbers together.
+*   `sub(a, b)`
+    *   Subtracts `b` from `a`.
+*   `multiply(a, b)`
+    *   Multiplies two numbers together.
+*   `divide(a, b)`
+    *   Divides `a` by `b` with a zero check.
+    *   **Raises**: `ValueError` if `b` is 0.
+*   `calculate_tax(income: float) -> float`
+    *   Calculates tax on `income` at a 10% rate.
+*   `calculate_discount(price: float, discount_percent: float) -> float`
+    *   Calculates the discount amount on a `price`.
+    *   **Raises**: `ValueError` if `discount_percent` is not between 0 and 100.
+*   `average(a: float, b: float) -> float`
+    *   Returns the average of two numbers.
+*   `max_of_two(a: float, b: float) -> float`
+    *   Returns the larger of two numbers.
+*   `is_palindrome(text: str) -> bool`
+    *   Checks if a string is a palindrome (reads the same forwards and backwards).
+    *   Removes non-alphanumeric characters and converts to lowercase for comparison.
+    *   **Args**:
+        *   `text` (str): The string to check.
+    *   **Returns**:
+        *   `bool`: `True` if the string is a palindrome, `False` otherwise.
+*   `fibonacci(n: int) -> int`
+    *   Calculates the `nth` Fibonacci number using iteration (0-indexed).
+    *   **Args**:
+        *   `n` (int): The position in the Fibonacci sequence.
+    *   **Returns**:
+        *   `int`: The `nth` Fibonacci number.
+    *   **Raises**: `ValueError` if `n` is negative.
+*   `factorial(n: int) -> int`
+    *   Calculates the factorial of a non-negative integer.
+    *   **Args**:
+        *   `n` (int): A non-negative integer.
+    *   **Returns**:
+        *   `int`: The factorial of `n`.
+    *   **Raises**: `ValueError` if `n` is negative.
+
+### Module: `math_utils.py`
+
+Provides basic mathematical utility functions.
+
+#### Functions
+
+*   `multiply(a, b)`
+    *   Multiplies two numbers together.
+*   `divide(a, b)`
+    *   Divides two numbers.
+    *   **Raises**: `ValueError` if `b` is 0.
+*   `power(base, exponent)`
+    *   Calculates `base` raised to the power of `exponent`.
+
+### Module: `new_feature.py`
+
+Defines an advanced calculator function that encapsulates various arithmetic operations.
+
+#### Functions
+
+*   `advanced_calculator()`
+    *   An "Advanced calculator with multiple operations." This function defines several nested helper functions for arithmetic operations:
+        *   `add(a, b)`: Returns the sum of `a` and `b`.
+        *   `subtract(a, b)`: Returns the difference of `a` and `b`.
+        *   `multiply(a, b)`: Returns the product of `a` and `b`.
+        *   `divide(a, b)`: Returns the quotient of `a` and `b`. Returns "Error: Division by zero" if `b` is 0.
+        *   `modulo(a, b)`: Returns the remainder of `a` divided by `b`. Returns "Error: Modulo by zero" if `b` is 0.
+        *   `power(base, exponent)`: Calculates `base` raised to the `exponent` power using a loop.
+        *   `factorial(n)`: Calculates the factorial of `n`. Returns "Error: Negative number" if `n` is negative.
+*   `test_calculator()`
+    *   Attempts to test the operations defined within `advanced_calculator`. Prints test results for addition, subtraction, multiplication, division, power, and factorial.
+
+### Module: `smart_webhook_feature.py`
+
+The core module for the Smart Webhook Feature, handling webhook processing and AI-driven documentation generation.
+
+#### Classes
+
+*   `WebhookProcessor(webhook_secret: str)`
+    *   Processes GitHub webhooks for automatic documentation updates.
+    *   **Constructor**:
+        *   `webhook_secret` (str): The secret key used to verify webhook signatures.
+    *   **Methods**:
+        *   `verify_webhook_signature(payload: str, signature: str) -> bool`
+            *   Verifies GitHub webhook signature for security.
+            *   **Args**:
+                *   `payload` (str): The webhook payload body.
+                *   `signature` (str): The `X-Hub-Signature-256` header.
+            *   **Returns**: `True` if signature is valid, `False` otherwise.
+        *   `analyze_commit_changes(commit_data: Dict[str, Any]) -> Dict[str, Any]`
+            *   Analyzes commit changes to determine if a documentation update is needed. Checks for changes in files with extensions `.py`, `.js`, `.ts`, `.java`, `.html`, `.css`, `.md`.
+            *   **Args**:
+                *   `commit_data` (Dict[str, Any]): GitHub commit information.
+            *   **Returns**: Analysis results with change detection, including `has_relevant_changes`, `relevant_files`, `total_changes`, and `analysis_timestamp`.
+        *   `generate_documentation_update(repo_name: str, commit_hash: str) -> Dict[str, Any]`
+            *   Generates documentation update information for a repository. Simulates AI processing by adding `ai_confidence` and `estimated_quality`.
+            *   **Args**:
+                *   `repo_name` (str): Name of the repository.
+                *   `commit_hash` (str): Git commit hash.
+            *   **Returns**: Documentation update information, including status, files updated, and AI analysis.
+        *   `process_webhook_payload(payload: Dict[str, Any]) -> Dict[str, Any]`
+            *   Processes incoming webhook payload and coordinates documentation updates.
+            *   **Args**:
+                *   `payload` (Dict[str, Any]): GitHub webhook payload.
+            *   **Returns**: Processing results, including repository/commit info, analysis, and documentation update details.
+*   `DocumentationGenerator(ai_model: str = "gemini-2.5-flash")`
+    *   Generates documentation using AI analysis.
+    *   **Constructor**:
+        *   `ai_model` (str): The name of the AI model to use (default: "gemini-2.5-flash").
+    *   **Methods**:
+        *   `analyze_code_structure(file_paths: list) -> Dict[str, Any]`
+            *   Analyzes code structure (file types, complexity, documentation needs) for documentation generation.
+            *   **Args**:
+                *   `file_paths` (list): List of code file paths.
+            *   **Returns**: Code structure analysis.
+        *   `generate_readme_content(repo_name: str, structure: Dict[str, Any]) -> str`
+            *   Generates `README.md` content based on code structure analysis. Includes sections for Overview, Technology Stack, Complexity Score, Documentation Needs, Installation, Usage, Features, Contributing, and License.
+            *   **Args**:
+                *   `repo_name` (str): Repository name.
+                *   `structure` (Dict[str, Any]): Code structure analysis.
+            *   **Returns**: Generated `README` content as a string.
+
+### Module: `start_server.py`
+
+A script to automate Git operations and start a FastAPI server.
+
+#### Functions
+
+*   `run_command(cmd, cwd=None)`
+    *   Runs a shell command and captures its output.
+    *   **Args**:
+        *   `cmd` (str): The command to run.
+        *   `cwd` (str, optional): The current working directory for the command.
+    *   **Returns**: `True` if the command succeeds, `False` otherwise.
+*   `main()`
+    *   Main function to handle the workflow:
+        1.  Changes directory to the project's root.
+        2.  Adds all current changes to Git (`git add .`).
+        3.  Commits changes with an automatic message (`git commit -m "Auto-update documentation - <timestamp>"`).
+        4.  Pushes changes to the remote repository (`git push`).
+        5.  Changes directory back to the project root.
+        6.  Starts a `uvicorn` server to run `backend.app:app` (requires `uvicorn` to be installed), on `0.0.0.0:8000` with `reload=True` and `log_level="info"`.
+
+### Module: `test_feature.py`
+
+Provides a function to calculate Fibonacci numbers using dynamic programming and a test suite for it.
+
+#### Functions
+
+*   `calculate_fibonacci(n)`
+    *   Calculates the `nth` Fibonacci number using dynamic programming.
+    *   **Args**:
+        *   `n` (int): The position in the Fibonacci sequence.
+    *   **Returns**:
+        *   `int`: The `nth` Fibonacci number. Returns 0 for `n <= 0`, 1 for `n == 1` or `n == 2`.
+*   `test_fibonacci()`
+    *   Tests the `calculate_fibonacci` function against a predefined set of test cases. Prints whether each test case passes or fails.
+
+## Contributing
 
 1.  Fork the repository
 2.  Create a feature branch
